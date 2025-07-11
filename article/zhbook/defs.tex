@@ -1,0 +1,142 @@
+\usepackage{fancybox}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath}
+\allowdisplaybreaks%
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{longtable}
+
+% bibentry for publications
+\usepackage{bibentry}
+\nobibliography*
+\newcommand{\zhpub}[1]{\begin{NoHyper}\bibentry{#1}\end{NoHyper}}
+
+% summary box
+\newenvironment{summary}{%
+    \par\raggedleft%
+    \begin{tcolorbox}[
+        blanker,
+        breakable,
+        width=\dimexpr\textwidth-1.5em
+    ]
+        \hrule\vspace*{0.5\baselineskip}%
+        \small\parindent0pt\parskip5pt
+        {\sffamily\bfseries Summary\ }%
+}{%
+    \vspace*{0.5\baselineskip}\hrule%
+    \end{tcolorbox}
+}
+
+% example box
+\newcounter{example}[chapter]
+\renewcommand{\theexample}{\thechapter.\arabic{example}}
+\newenvironment{example}{%
+    \refstepcounter{example}%
+    \par\raggedleft%
+    \begin{tcolorbox}[
+        blanker,
+        breakable,
+        width=\dimexpr\textwidth-1.5em
+    ]
+        \hrule\vspace*{0.5\baselineskip}%
+        \small\parindent0pt\parskip5pt
+        {\sffamily\bfseries Example~\theexample\ }%
+}{%
+    \vspace*{0.5\baselineskip}\hrule%
+    \end{tcolorbox}
+}
+
+% remark box
+\newcounter{remark}[chapter]
+\renewcommand{\theremark}{\thechapter.\arabic{remark}}
+\newenvironment{remark}{%
+    \refstepcounter{remark}%
+    \par\raggedleft%
+    \begin{tcolorbox}[
+        blanker,
+        breakable,
+        width=\dimexpr\textwidth-1.5em
+    ]
+        \hrule\vspace*{0.5\baselineskip}%
+        \small\parindent0pt\parskip5pt
+        {\sffamily\bfseries Remark~\theremark\ }%
+}{%
+    \vspace*{0.5\baselineskip}\hrule%
+    \end{tcolorbox}
+}
+
+% algorithm box
+\newcounter{algorithm}[chapter]
+\renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}
+\newenvironment{algorithm}{%
+    \refstepcounter{algorithm}%
+    \par\raggedleft%
+    \begin{tcolorbox}[
+        blanker,
+        breakable,
+        width=\dimexpr\textwidth-1.5em
+    ]
+        \hrule\vspace*{0.5\baselineskip}%
+        \small\parindent0pt
+        {\sffamily\bfseries Algorithm~\thealgorithm\ }%
+}{%
+    \vspace*{0.5\baselineskip}\hrule%
+    \end{tcolorbox}
+}
+
+\usepackage{imakeidx}
+\indexsetup{headers={\sffamily\bfseries Index}{\sffamily\bfseries Index}}
+\makeindex%
+
+% commands
+\newcommand{\ones}{{\bf 1{}}}  % vector with all components one
+\newcommand{\reals}{{\bf R{}}}  % real numbers
+\newcommand{\ints}{{\bf Z{}}}  % integers
+\newcommand{\symms}{{\bf S{}}}  % symmetric matrices
+\newcommand{\prob}{\mathop{\bf prob}}  % probability
+\newcommand{\expect}{\mathop{\bf E{}}}  % expectation
+\newcommand{\var}{\mathop{\bf var}}  % variance
+\newcommand{\quart}{\mathop{\bf quartile}}  % quartile
+\newcommand{\card}{\mathop{\bf card}}  % cardinality
+\renewcommand{\dim}{\mathop{\bf dim}}  % dimension
+\newcommand{\dom}{\mathop{\bf dom}}  % domain
+\newcommand{\dist}{\mathop{\bf dist}}  % distance
+\newcommand{\tr}{\mathop{\bf tr}}  % trace
+\newcommand{\diag}{\mathop{\bf diag}}  % diagonal matrix
+\newcommand{\rank}{\mathop{\bf rank}}  % rank
+\newcommand{\argmax}{\mathop{\rm argmax}}  % argmax
+\newcommand{\argmin}{\mathop{\rm argmin}}  % argmin
+\newcommand{\supp}{\mathop{\bf supp}}  % support
+\newcommand{\aff}{\mathop{\bf aff}}  % affine hull
+\newcommand{\conv}{\mathop{\bf conv}}  % convex hull
+\newcommand{\rg}{\mathop{\cal R{}}}  % range
+\newcommand{\nl}{\mathop{\cal N{}}}  % null space
+\newcommand{\intr}{\mathop{\bf int}}  % interior
+\newcommand{\ri}{\mathop{\bf relint}}  % relative interior
+\newcommand{\cl}{\mathop{\bf cl}}  % closure
+\newcommand{\bd}{\mathop{\bf bd}}  % boundary
+\newcommand{\epi}{\mathop{\bf epi}}  % epigraph
+\newcommand{\hypo}{\mathop{\bf hypo}}  % hypograph
+\newcommand{\norm}[1]{{\lVert #1 \rVert}}  % norm
+\newcommand{\lambdamax}{{\lambda_{\rm max}}}  % max eigenvalue
+\newcommand{\lambdamin}{{\lambda_{\rm min}}}  % min eigenvalue
+\newcommand{\sigmamax}{{\sigma_{\rm max}}}  % max singular value
+\newcommand{\sigmamin}{{\sigma_{\rm min}}}  % min singular value
+\newcommand{\cond}{\mathop{\bf cond}} % condition number
+\newcommand{\ball}{{\cal B{}}}  % ball
+
+\newcommand{\cf}{{\rmfamily\itshape cf.}}
+\newcommand{\eg}{{\rmfamily\itshape e.g.}}
+\newcommand{\ie}{{\rmfamily\itshape i.e.}}
+\newcommand{\etc}{{\rmfamily\itshape etc.}}
+\newcommand{\etal}{{\rmfamily\itshape et al.}}
+
+% auxillary packages, to be removed
+\usepackage{blindtext}
+\usepackage{todonotes}
+
+% hyperlink
+\usepackage[colorlinks]{hyperref}
+% \hypersetup{hidelinks}

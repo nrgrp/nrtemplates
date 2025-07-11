@@ -4,7 +4,8 @@ This repository contains some useful templates for various documents shared acro
 
 ## Article
 
-* [zharticle](./article/zharticle): A LaTeX template created and used by Hao Zhu. Check [this repository](https://github.com/haozhu10015/latex-template) for potential updates.
+* [zharticle](./article/zharticle): A LaTeX template for papers created and used by Hao Zhu. Check [this repository](https://github.com/haozhu10015/latex-template) for potential updates.
+* [zhbook](./article/zhbook): A LaTeX template for books, reports, notes, thesis, etc., created and used by Hao Zhu. There are lots of redundant sections in the template such that it can be adapted for different purposes; feel free to delete any of them if not needed.
 
 ## Presentation
 

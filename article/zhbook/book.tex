@@ -1,0 +1,42 @@
+\documentclass{book}
+
+\usepackage{zhbook}
+\input{defs.tex}
+
+\begin{document}
+\frontmatter%
+\input{sections/title.tex}
+
+\cleardoublepage\phantomsection%
+\pdfbookmark[0]{Contents}{tockey}
+\tableofcontents
+\markboth{\sffamily\bfseries Contents}{\sffamily\bfseries Contents}
+
+\input{sections/preface.tex}
+\input{sections/acks.tex}
+\input{sections/abstract.tex}
+\input{sections/pubs.tex}
+
+\mainmatter%
+\input{sections/intro.tex}
+
+\part{First part}
+\input{sections/somechapter.tex}
+
+\part{Second part}
+\input{sections/somechapter.tex}
+
+\appendix%
+\cleardoublepage\phantomsection%
+\addcontentsline{toc}{part}{Appendices}
+\part*{Appendices}
+
+\input{sections/somechapter.tex}
+\input{sections/notation.tex}
+
+\cleardoublepage\phantomsection%
+\addcontentsline{toc}{chapter}{References}
+{\small \bibliography{refs}}
+\markboth{\sffamily\bfseries References}{\sffamily\bfseries References}
+
+\end{document}

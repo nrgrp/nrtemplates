@@ -1,0 +1,94 @@
+\chapter{Notation}
+
+\subsubsection*{Some specific sets}
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+    $\reals$ & Real numbers.\\
+    $\reals^n$ & Real $n$-vectors ($n \times 1$ matrices).\\
+    $\reals^{m \times n}$ & Real $m \times n$ matrices.\\
+    $\reals_+,\ \reals_{++}$ & Nonnegative, positive real numbers.\\
+    $\ints$ & Integers.\\
+    $\ints_+,\ \ints_{++}$ & Nonnegative, positive integers.\\
+    $\symms^n$ & Symmetric $n \times n$ matrices.\\
+    $\symms^n_+,\ \symms^n_{++}$ & Symmetric positive semidefinite, positive definite, $n \times n$ matrices.\\
+\end{longtable}
+
+\subsubsection*{Vectors and matrices}
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+    $\ones$ & Vector with all components one.\\
+    $e_i$ & $i$th standard basis vector.\\
+    $I$ & Identity matrix.\\
+    $x^T y$ & Inner product of vectors $x$ and $y$.\\
+    $X^T$ & Transpose of matrix $X$.\\
+    $\tr X$ & Trace of matrix $X$.\\
+    $\lambda_i(X)$ & $i$th largest eigenvalue of symmetric matrix $X$.\\
+    $\lambdamax(X),\ \lambdamin(X)$ & Maximum, minimum eigenvalue of symmetric matrix $X$.\\
+    $\sigma_i(X)$ & $i$th largest singular value of matrix $X$.\\
+    $\sigmamax(X),\ \sigmamin(X)$ & Maximum, minimum singular value of matrix $X$.\\
+    $X^\dagger$ & Moore-Penrose or pseudo-inverse of matrix $X$.\\
+    $x \perp y$ & Vectors $x$ and $y$ are orthogonal: $x^T y = 0$.\\
+    $V^\perp$ & Orthogonal complement of subspace $V$.\\
+    $\diag(x)$ & Diagonal matrix with diagonal entries $x_1, \ldots, x_n$.\\
+    $\diag(X, Y, \ldots)$ & Block diagonal matrix with diagonal blocks $X, Y, \ldots$.\\
+    $\rank A$ & Rank of matrix $A$.\\
+    $\rg(A)$ & Range of matrix $A$.\\
+    $\nl(A)$ & Nullspace of matrix $A$.\\
+    $\cond(A)$, $\kappa(A)$ & Condition number of matrix $A$.\\
+\end{longtable}
+
+\subsubsection*{Norms and distances}
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+    $\norm{\, \cdot\,}$ & A norm.\\
+    $\norm{\, \cdot\,}_*$ & Dual of norm $\norm{\, \cdot\,}$.\\
+    $\norm{x}_2$ & Euclidean (or $\ell_2$-) norm of vector $x$.\\
+    $\norm{x}_1$ & $\ell_1$-norm of vector $x$.\\
+    $\norm{x}_\infty$ & $\ell_\infty$-norm of vector $x$.\\
+    $\norm{X}_2$ & Spectral norm (maximum singular value) of matrix $X$.\\
+    $\ball(c, r)$ & Ball with center $c$ and radius $r$.\\
+    $\dist(A, B)$ & Distance between sets (or points) $A$ and $B$.\\
+\end{longtable}
+
+\subsubsection*{Generalized inequalities}
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+    $x \preceq y$ & Componentwise inequality between vectors $x$ and $y$.\\
+    $x \prec y$ & Strict componentwise inequality between vectors $x$ and $y$.\\
+    $X \preceq Y$ & Matrix inequality between symmetric matrices $X$ and $Y$.\\
+    $X \prec Y$ & Strict matrix inequality between symmetric matrices $X$ and $Y$.\\
+    $x \preceq_K y$ & Generalized inequality induced by proper cone $K$.\\
+    $x \prec_K y$ & Strict generalized inequality induced by proper cone $K$.\\
+    $x \preceq_{K^*} y$ & Dual generalized inequality.\\
+    $x \prec_{K^*} y$ & Dual strict generalized inequality.\\
+\end{longtable}
+
+\subsubsection*{Topology and convex analysis}
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+    $\card C$ & Cardinality of set $C$.\\
+    $\intr C$ & Interior of set $C$.\\
+    $\ri C$ & Relative interior of set $C$.\\
+    $\cl C$ & Closure of set $C$.\\
+    $\bd C$ & Boundary of set $C$: $\bd C = \cl C \setminus \intr C$.\\
+    $\conv C$ & Convex hull of set $C$.\\
+    $\aff C$ & Affine hull of set $C$.\\
+    $K^*$ & Dual cone associated with $K$.\\
+    $I_C$ & Indicator function of set $C$.\\
+    $S_C$ & Support function of set $C$.\\
+    $f^*$ & Conjugate function of $f$.
+\end{longtable}
+
+\subsubsection*{Probability}
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+    $\expect X$ & Expected value of random variable $X$.\\
+    $\prob(S)$ & Probability of event $S$.\\
+    $\var X$ & Variance of random variable $X$.\\
+    $\mathcal{N}(c, \Sigma)$ & Gaussian distribution with mean $c$, covariance (matrix) $\Sigma$.\\
+    $\Phi$ & Cumulative distribution function of $\mathcal{N}(0, 1)$ random variable.\\
+\end{longtable}
+
+\subsubsection*{Functions and derivatives}
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+    $f \colon A \to B$ & $f$ is a function on the set $\dom f \subseteq A$ into the set $B$.\\
+    $\dom f$ & Domain of function $f$.\\
+    $\epi f$ & Epigraph of function $f$.\\
+    $\nabla f$ & Gradient of function $f$.\\
+    $\nabla^2 f$ & Hessian of function $f$.\\
+    $D f$ & Derivative (Jacobian) matrix of function $f$.\\
+\end{longtable}

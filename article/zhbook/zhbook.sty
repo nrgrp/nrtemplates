@@ -1,0 +1,55 @@
+\usepackage[letterpaper,top=1.8in,bottom=1.4in,inner=1.4in,outer=2.1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% section title
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+
+% header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyheadoffset[leh,roh]{0.6in}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\bfseries\thechapter\quad#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\sffamily\bfseries\thesection\quad#1}}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\fancyhead[LE,RO]{\sffamily\bfseries\thepage}
+% no header and footer for chapter title page
+\usepackage{emptypage}
+\fancypagestyle{plain}{%
+  \fancyhf{}% Clear header/footer
+  \renewcommand{\headrulewidth}{0pt}% Remove header rule
+}
+
+% section number outside
+\usepackage{titlesec}
+\titlelabel{\llap{\thetitle\quad}}
+
+% contents
+\setcounter{tocdepth}{1}
+\usepackage[titles]{tocloft}  % add 'subfigure' to options if using subfigure package
+\renewcommand{\cftpartfont}{\large\sffamily\bfseries}
+\renewcommand{\cftpartpagefont}{\large\sffamily\bfseries}
+\renewcommand{\cftchapfont}{\sffamily\bfseries}
+\renewcommand{\cftchappagefont}{\sffamily\bfseries}
+\renewcommand{\cftsecfont}{\sffamily}
+\renewcommand{\cftsecpagefont}{\sffamily}
+
+% figure and table
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{labelsep=space}
+\captionsetup[figure]{width=0.85\textwidth, font=small}
+\captionsetup[table]{width=0.85\textwidth, font=small}
+\renewcommand{\figurename}{\sffamily\bfseries Figure}
+\renewcommand{\tablename}{\sffamily\bfseries Table}
+
+% array stretch (for structuring optimization problems)
+\renewcommand{\arraystretch}{1.2}
+
+% bibliography
+\bibliographystyle{alpha}
+\renewcommand{\bibname}{References}
