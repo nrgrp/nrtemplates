@@ -1,0 +1,33 @@
+\usepackage[a0paper,landscape]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+
+\usepackage[absolute]{textpos}
+\TPGrid[40mm,40mm]{23}{12}  % 3 cols of width 7, plus 2 gaps width 1
+
+\usepackage{xcolor}
+\definecolor{Red}{rgb}{0.9,0.0,0.1}
+\definecolor{bluegray}{rgb}{0.15,0.20,0.40}
+\definecolor{bluegraylight}{rgb}{0.35,0.40,0.60}
+\definecolor{gray}{rgb}{0.3,0.3,0.3}
+\definecolor{lightgray}{rgb}{0.7,0.7,0.7}
+\definecolor{darkblue}{rgb}{0.2,0.2,1.0}
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.3}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+\renewcommand\title[1]{{\VERYHuge\color{Red} #1}\par}
+\newcommand\Head[1]{{\huge\color{bluegray} #1}\par\bigskip}
+\newcommand\LHead[1]{{\LARGE\color{bluegray} #1}\par}
+\newcommand\Subhead[1]{{\large\color{bluegray} #1}\par}
+
+% command for using \large as default text size
+\newcommand{\largetext}{\renewcommand{\normalsize}{\large}}
+
+% bibliography
+\bibliographystyle{alpha}
+
+% array stretch (for structuring optimization problems)
+\renewcommand{\arraystretch}{1.2}

@@ -1,0 +1,45 @@
+\usepackage[left=1.2in, right=1.2in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% title
+\usepackage{titling}
+\pretitle{\begin{center}\sffamily\bfseries\LARGE}
+
+% authors
+\usepackage{authblk}
+
+% abstract title
+\usepackage{abstract}
+\renewcommand\abstractnamefont{\sffamily\bfseries\large}
+
+% section titles
+\usepackage{sectsty}
+\sectionfont{\sffamily\large}
+\subsectionfont{\sffamily\normalsize}
+\subsubsectionfont{\sffamily\normalsize}
+\paragraphfont{\sffamily\normalsize}
+\subparagraphfont{\sffamily\normalsize}
+
+% bibliography
+\bibliographystyle{alpha}
+
+% array stretch (for structuring optimization problems)
+\renewcommand{\arraystretch}{1.2}
+
+% figure and table titles
+\usepackage{caption}
+\captionsetup{labelsep=space}
+\captionsetup[figure]{font=small}
+\captionsetup[table]{font=small}
+\renewcommand{\figurename}{\sffamily\bfseries Figure}
+\renewcommand{\tablename}{\sffamily\bfseries Table}
+
+% contents
+\setcounter{tocdepth}{2}
+\usepackage[titles]{tocloft}  % add 'subfigure' to options if using subfigure package
+\renewcommand{\cftsecfont}{\sffamily\bfseries}
+\renewcommand{\cftsecpagefont}{\sffamily\bfseries}
+\renewcommand{\cftsubsecfont}{\sffamily}
+\renewcommand{\cftsubsecpagefont}{\sffamily}

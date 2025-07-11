@@ -1,0 +1,87 @@
+\usefonttheme[onlymath]{serif}
+\setbeamercolor{structure}{fg=black}
+\setbeamertemplate{navigation symbols}{}
+
+\definecolor{zhcolor}{RGB}{52, 74, 154}
+
+% title page
+\setbeamertemplate{background canvas}{
+    \ifnum\c@framenumber=1%
+        \includegraphics[width=\paperwidth]{media/title_bg.pdf}
+    \fi%
+}
+\setbeamertemplate{title page}{
+    \begin{minipage}[t][.3\textheight]{\textwidth}
+    \end{minipage}
+    \begin{minipage}[t][.7\textheight]{\textwidth}
+        \begin{flushleft}
+            \color{white}
+            \begin{beamercolorbox}{structure}
+                \color{white}{\Large\bfseries\inserttitle}\\[0.5ex]{\insertsubtitle}
+            \end{beamercolorbox}
+            \vspace*{\fill}
+            \insertauthor\vspace*{0.5cm}\par
+            \insertinstitute\vspace*{0.5cm}\par
+            \insertdate
+        \end{flushleft}
+    \end{minipage}
+}
+
+% footer
+\newcommand\footlineon{
+    \setbeamertemplate{footline}{
+        \hbox{%
+        \begin{beamercolorbox}[wd=0.5\textwidth,ht=2.5ex,dp=1.125ex,leftskip=0.55cm,rightskip=0.55cm]{structure}
+            \includegraphics[height=3.5ex]{media/ufr_logo.pdf}\vspace*{-0.5ex}
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=0.5\textwidth,ht=2.5ex,dp=1.125ex,leftskip=0.55cm,rightskip=0.55cm]{structure}
+            \color{zhcolor}\footnotesize\insertsection\hfill\insertframenumber%
+        \end{beamercolorbox}}
+        \vskip 0.45cm
+    }
+}
+
+% frame title
+\setbeamertemplate{frametitle}{
+    \vspace*{0.45cm}
+    \begin{beamercolorbox}[leftskip=-0.45cm]{structure}
+        \color{zhcolor}{\bfseries\large\insertframetitle}
+    \end{beamercolorbox}
+    \vspace*{-0.9ex}
+    \begin{beamercolorbox}[leftskip=-0.45cm]{structure}
+        \color{zhcolor}{\footnotesize\insertframesubtitle}
+    \end{beamercolorbox}
+}
+
+% itemize
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{--}
+
+% bibliography
+\bibliographystyle{alpha}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+% put bibliography entries in one line
+\newcommand\onelinebib{
+    \setbeamertemplate{bibliography entry title}{}
+    \setbeamertemplate{bibliography entry location}{}
+    \setbeamertemplate{bibliography entry note}{}
+}
+
+% outline
+\setbeamertemplate{section in toc}{\color{zhcolor}\quad\inserttocsection}
+\newcommand\sectionoutlineon{
+    \AtBeginSection{
+        \usebackgroundtemplate{
+            \tikz[remember picture,overlay]
+                \node[anchor=south west, inner sep=0pt, opacity=0.2] at ([yshift=-0.9cm]current page.south)
+                {\includegraphics[height=1.04\paperheight]{media/ufr_stamp.pdf}};}
+        \begin{frame}
+            \frametitle{Outline}
+            \tableofcontents[currentsection, subsectionstyle=hide, subsubsectionstyle=hide]
+        \end{frame}
+        \usebackgroundtemplate{}
+    }
+}
+
+% array stretch (for structuring optimization problems)
+\renewcommand{\arraystretch}{1.2}
