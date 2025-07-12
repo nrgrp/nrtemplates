@@ -1,0 +1,72 @@
+\usefonttheme[onlymath]{serif}
+\setbeamercolor{structure}{fg=black}
+\setbeamertemplate{navigation symbols}{}
+
+\definecolor{nrcolor}{RGB}{52, 74, 154}
+
+% title page
+\setbeamertemplate{title page}{
+    \begin{center}
+        \vspace*{\fill}
+        \begin{beamercolorbox}{structure}
+            \centering\color{nrcolor}{\Large\bfseries\inserttitle}\\[0.5ex]{\small\insertsubtitle}
+        \end{beamercolorbox}
+        \vspace*{2ex}\par
+        \textbf{\insertauthor}\vspace*{1ex}\par
+        \small\insertinstitute\vspace*{3ex}\par
+        \footnotesize\insertdate\par
+        \vspace*{10ex}
+        \includegraphics[width=0.3\textwidth]{media/ufr_logo.pdf}
+    \end{center}
+}
+
+% footer
+\newcommand\footlineon{
+    \setbeamertemplate{footline}{
+        \hbox{%
+        \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=0.55cm,rightskip=0.55cm]{structure}
+            \color{nrcolor}\footnotesize\insertsection\hfill\insertframenumber%
+        \end{beamercolorbox}}
+        \vskip 0.45cm
+    }
+}
+
+% frame title
+\setbeamertemplate{frametitle}{
+    \vspace*{0.45cm}
+    \begin{beamercolorbox}[leftskip=-0.45cm]{structure}
+        \color{nrcolor}{\bfseries\large\insertframetitle}
+    \end{beamercolorbox}
+    \vspace*{-0.9ex}
+    \begin{beamercolorbox}[leftskip=-0.45cm]{structure}
+        \color{nrcolor}{\footnotesize\insertframesubtitle}
+    \end{beamercolorbox}
+}
+
+% itemize
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{--}
+
+% bibliography
+\bibliographystyle{alpha}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+% put bibliography entries in one line
+\newcommand\onelinebib{
+    \setbeamertemplate{bibliography entry title}{}
+    \setbeamertemplate{bibliography entry location}{}
+    \setbeamertemplate{bibliography entry note}{}
+}
+
+% outline
+\setbeamertemplate{section in toc}{\color{nrcolor}\quad\inserttocsection}
+\newcommand\sectionoutlineon{
+    \AtBeginSection{
+        \begin{frame}
+            \frametitle{Outline}
+            \tableofcontents[currentsection, subsectionstyle=hide, subsubsectionstyle=hide]
+        \end{frame}
+    }
+}
+
+% array stretch (for structuring optimization problems)
+\renewcommand{\arraystretch}{1.2}
