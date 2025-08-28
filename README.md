@@ -9,7 +9,7 @@ This repository contains some useful templates for various documents shared acro
 
 ## Presentation
 
-* [zhslides](./presentation/zhslides): A LaTeX template for slides, close to the style provided by the package [foiltex](https://ctan.org/pkg/foiltex) (which is not maintained anymore). Check [this repository](https://github.com/haozhu10015/latex-template) for potential updates.
+* [zhslides](./presentation/zhslides): A LaTeX (Beamer) template for slides, close to the style provided by the package [FoilTeX](https://ctan.org/pkg/foiltex). (A slides template using FoilTeX instead of Beamer can be found [here](https://github.com/haozhu10015/latex-template/tree/main/slides/foiltex).) Check [this repository](https://github.com/haozhu10015/latex-template) for potential updates.
 * [slides_ufr](./presentation/slides_ufr): A (nonofficial) LaTeX template corresponding to the [University of Freiburg presentation template](https://cd.uni-freiburg.de/publikationen) (new design system).
 * [nrslides](./presentation/nrslides): A LaTeX template once used for making lecture slides for the Probabilistic Graphical Models course, but can also be good for general purposes as well.
 
